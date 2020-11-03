@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tm:TermDictionary xmlns:tm="http://exerd.com/term-model" version="1.1">
+  <term name="아이디" physicalName="id"/>
+  <term name="암호" physicalName="pwd"/>
+  <term name="이름" physicalName="name"/>
+  <term name="전화번호" physicalName="phone"/>
+  <term name="우편번호" physicalName="zip_num"/>
+  <term name="시도" physicalName="sido"/>
+  <term name="구군" physicalName="gugun"/>
+  <term name="동" physicalName="dong"/>
+  <term name="우편코드" physicalName="zip_code"/>
+  <term name="번지" physicalName="bunji"/>
+  <term name="회원" physicalName="member"/>
+  <term name="이메일" physicalName="email"/>
+  <term name="주소" physicalName="address"/>
+  <term name="여부" physicalName="yn"/>
+  <term name="가입" physicalName="join"/>
+  <term name="일" physicalName="date"/>
+  <term name="상품" physicalName="product"/>
+  <term name="종류" physicalName="kind"/>
+  <term name="원가" physicalName="price">
+    <synonyms>가</synonyms>
+    <synonyms>액</synonyms>
+  </term>
+  <term name="판매" physicalName="sale"/>
+  <term name="마진" physicalName="margin">
+    <synonyms>수익</synonyms>
+  </term>
+  <term name="내용" physicalName="content"/>
+  <term name="이미지" physicalName="image"/>
+  <term name="삭제" physicalName="del"/>
+  <term name="베스트" physicalName="best"/>
+  <term name="등록" physicalName="reg"/>
+  <term name="장바구니" physicalName="cart"/>
+  <term name="수량" physicalName="quantity"/>
+  <term name="처리완료" physicalName="result"/>
+  <term name="주문" physicalName="order"/>
+  <term name="상세" physicalName="detail"/>
+  <term name="게시판" physicalName="board"/>
+  <term name="QNA" physicalName="qna"/>
+  <term name="제목" physicalName="subject"/>
+  <term name="문의" physicalName="query">
+    <physicalSynonyms>q</physicalSynonyms>
+  </term>
+  <term name="답변" physicalName="apply">
+    <physicalSynonyms>a</physicalSynonyms>
+    <physicalSynonyms>rep</physicalSynonyms>
+  </term>
+  <term name="번호" physicalName="no"/>
+  <term name="탈퇴" physicalName="leave"/>
+  <term name="작성자" physicalName="writer"/>
+</tm:TermDictionary>

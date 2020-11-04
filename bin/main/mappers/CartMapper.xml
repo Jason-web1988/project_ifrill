@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project_ifrill.mapper.CartMapper">
+
+	<resultMap type="Cart" id="resCart">
+		<id column="NO" property="no"/>
+		<result column="MEMBERID" property="member.id"/>
+		<result column="PNO" property="product.no"/>
+		<result column="MNAME" property="member.name"/>
+		<result column="PNAME" property="product.name"/>
+		<result column="QUANTITY" property="quantity"/>
+		<result column="REG_DATE" property="regDate"/>
+		<result column="SALEPRICE" property="product.salePrice"/>
+		<result column="RESULT" property="isResult"/>
+	</resultMap>
+<!-- 	<resultMap type="Cart" id="resCart">
+		<id column="NO" property="no"/>
+		<result column="MEMBERID" property="member.id"/>
+		<result column="PNO" property="product.no"/>
+		<result column="QUANTITY" property="quantity"/>
+		<result column="RESULT" property="isResult"/>
+		<result column="REG_DATE" property="regDate"/>
+	</resultMap> -->
+
+ 	<select id="listCart" resultMap="resCart">
+		SELECT NO, MEMBERID, PNO, MNAME, PNAME, QUANTITY, REG_DATE, SALEPRICE, RESULT
+		  FROM CART_VIEW
+		 WHERE MEMBERID = #{member.id}
+		 ORDER BY NO DESC
+	</select>
+	
+	
+	<insert id="insertCart" parameterType="Cart">
+		INSERT INTO CART(MEMBERID, PNO, QUANTITY) 
+		VALUES(#{member.id}, #{product.no}, #{quantity})
+	</insert>
+	
+	<update id="updateCartResult" parameterType="Cart">
+		UPDATE CART 
+		   SET QUANTITY = #{quantity}  
+		 WHERE MEMBERID = #{member.id}
+	</update>
+	
+	<delete id="deleteCart">
+		DELETE 
+		  FROM CART 
+		 WHERE NO= #{no}
+	</delete>
+</mapper>

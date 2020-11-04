@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project_ifrill.mapper.OrderMapper">
+<!-- 	<resultMap type="Orders"  id="resOders">
+		<result column="ONO" property="no" />
+		<result column="MID" property="member.id"/>
+		<result column="MNAME" property="member.name"/>
+		<result column="PHONE" property="member.phone"/>
+		<result column="ZIP_NUM" property="member.zipNum"/>
+		<result column="ADDRESS" property="member.address"/>
+		<result column="DNO" property="detail.no"/>
+		<result column="ORDER_DATE" property="orderDate"/>
+		<result column="RESULT"	property="detail.result"/>
+		
+	</resultMap>
+	
+	<resultMap type="Product" id="resProduct">
+		<result column="PNO" property="product.no"/>
+		<result column="PNAME" property="product.name"/>
+		<result column="SALEPRICE" property="product.salePrice"/> 
+	</resultMap>
+
+	<select id="listOrderByMember" resultType="Orders">
+		SELECT ONO, MID, MNAME, PHONE, ZIP_NUM, ADDRESS, DNO, ORDER_DATE, RESULT, PNO, PNAME, QUANTITY, SALEPRICE
+        FROM ORDER_VIEW 
+        WHERE MID=#{member.id} AND RESULT LIKE %#{detail.result}% AND ONO= #{no}
+	</select> -->
+	
+	<resultMap type="Orders" id="resOrder">
+		<result column=""/>
+	</resultMap>
+
+	
+	<select id="listOrders"  resultMap="resOrder">
+		SELECT DNO, ONO, MID, ORDER_DATE, PNO, QUANTITY, MNAME, ZIP_NUM, ADDRESS, PHONE, PNAME, SALEPRICE, RESULT
+		FROM ORDER_VIEW
+		WHERE MNAME like #{member.name}
+		ORDER BY RESULT, ONO DESC
+	</select>
+	
+	<select id="updateOrderResult" parameterType="int">
+		UPDATE ORDER_DETAIL 
+		SET RESULT_YN = '1' 
+		WHERE ONO = #{no}
+	</select>
+	
+</mapper>

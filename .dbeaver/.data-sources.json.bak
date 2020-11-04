@@ -32,7 +32,7 @@
 		"oracle_thin-1758dac2446-5bc6c926328037d1": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "orcl",
+			"name": "orcl-i_frill",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
@@ -54,8 +54,7 @@
 					"@dbeaver-connection-type@": "BASIC",
 					"@dbeaver-sid-service@": "SERVICE"
 				},
-				"auth-model": "oracle_native",
-				"handlers": {}
+				"auth-model": "oracle_native"
 			}
 		}
 	},

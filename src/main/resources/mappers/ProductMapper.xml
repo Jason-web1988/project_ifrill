@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project_ifrill.mapper.ProductMapper">
+	<sql id="listNP">
+		SELECT NO, NAME, SALEPRICE, IMAGE FROM NEW_PRO_VIEW
+	</sql>
+	<sql id="listBP">
+		SELECT NO, NAME, SALEPRICE, IMAGE FROM BEST_PRO_VIEW
+	</sql>
+	
+	<select id="listNewProduct" resultType="Product">
+		<include refid="listNP"/>
+	</select>
+	
+	<select id="listBestProduct"  resultType="Product">
+		<include refid="listBP"/>
+	</select>
+	
+	<select id="getProduct" resultType="Product">
+		SELECT NO, NAME, KIND, PRICE, SALEPRICE, MARGIN, CONTENT, IMAGE, DEL_YN, BEST_YN, REG_DATE
+        FROM PRODUCT 
+        WHERE NO= #{no}
+	</select>
+	
+	<select id="listKindProduct" resultType="Product">
+		SELECT NO, NAME, KIND, PRICE, SALEPRICE, MARGIN, CONTENT, IMAGE, DEL_YN, BEST_YN, REG_DATE 
+        FROM PRODUCT
+        WHERE kind=#{kind}
+	</select>
+	
+	<select id="totalRecord" resultType="integer">
+		SELECT COUNT(*) 
+		FROM PRODUCT 
+		WHERE NAME LIKE #{name}
+	</select>
+	
+</mapper>

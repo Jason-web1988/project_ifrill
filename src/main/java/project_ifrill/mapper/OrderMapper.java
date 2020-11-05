@@ -1,8 +1,9 @@
 package project_ifrill.mapper;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
-import project_ifrill.dto.Member;
 import project_ifrill.dto.Orders;
 
 public interface OrderMapper {
@@ -14,9 +15,9 @@ public interface OrderMapper {
     void insertOrderDetail(Cart cart, int ordersNo);
       */      
     
-    Orders listOrderByMember(String memberId, int orderNo, String result);
+    List<Orders> listOrderByMember(Map<String, Object> maps);
     
-    ArrayList<Integer> selectSeqOrderIng(Member member, String result);
+    ArrayList<Integer> selectSeqOrderIng(Map<String, Object> maps);
     
     ArrayList<Orders> listOrders(String memberName);
     

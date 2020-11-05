@@ -9,8 +9,20 @@ public class Orders {
     private Date orderDate; // 주문일
     private ArrayList<OrderDetail> details;
     private OrderDetail detail;
+    //product get,set 추가
+    private Product product;
     
-    public int getNo() {
+    
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	public int getNo() {
         return no;
     }
 

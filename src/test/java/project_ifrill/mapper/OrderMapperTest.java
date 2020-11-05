@@ -1,8 +1,9 @@
 package project_ifrill.mapper;
 
-import static org.junit.Assert.fail;
-
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
@@ -17,6 +18,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import project_ifrill.config.ControllerConfig;
+import project_ifrill.dto.Member;
+import project_ifrill.dto.OrderDetail;
 import project_ifrill.dto.Orders;
 
 
@@ -38,25 +41,47 @@ public class OrderMapperTest {
 	public void test01SelectMaxOrdersNo() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 		//안함
-		fail("Not yet implemented");
+		
+		int res = mapper.selectMaxOrdersNo();
+		Assert.assertEquals(3, res);
+		
 	}
 
 	@Test
 	public void test02ListOrderByMember() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 		//안함
-		fail("Not yet implemented");
-		/*
-		 * Orders orders = mapper.listOrderByMember("two", 1, "1");
-		 * Assert.assertNotNull(orders); log.debug(orders.toString());
-		 */
+		Member memberId = new Member();
+		memberId.setId("two");
+		OrderDetail orderResult = new OrderDetail();
+		orderResult.setResult("1");
+		
+		Map<String, Object> maps = new HashMap<>();
+		maps.put("MemberId", memberId.getId());
+//		maps.put("orderResult", "'%" + orderResult.getResult() + "%'");
+//		maps.put("ono", 1);
+		
+		
+		List<Orders> orders = mapper.listOrderByMember(maps);
+		Assert.assertNotNull(orders); 
+		 
 	}
 
 	@Test
 	public void test03SelectSeqOrderIng() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 
-		fail("Not yet implemented");
+		Member member = new Member();
+		member.setId("two");
+		OrderDetail result = new OrderDetail();
+		result.setResult("1");
+		
+		Map<String, Object> maps = new HashMap<>();
+		maps.put("MemberId", member.getId());
+		maps.put("Result", result.getResult());
+	
+		List<Integer> list = mapper.selectSeqOrderIng(maps);
+		Assert.assertNotNull(list);
 	}
 
 	@Test
@@ -72,7 +97,7 @@ public class OrderMapperTest {
 	public void test5UpdateOrderResult() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 
-		int res = mapper.updateOrderResult(1);
+		int res = mapper.updateOrderResult(2);
 		Assert.assertEquals(1, res);
 	}
 

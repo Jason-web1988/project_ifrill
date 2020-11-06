@@ -1,6 +1,7 @@
 package project_ifrill.mapper;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import project_ifrill.dto.Product;
 
@@ -17,7 +18,8 @@ public interface ProductMapper {
     //관리자용 - 상품관리 페이징
     int totalRecord(String productName);
     public String pageNumber(int tpage, String name);
-    ArrayList<Product> listProduct(int tpage, String product_name);
+//    ArrayList<Product> listProduct(int tpage, String product_name);
+    ArrayList<Product> listProduct(Map<String, Object> maps);
     
     //관리자용 - 상품 등록 및 수정
     int insertProduct(Product product);

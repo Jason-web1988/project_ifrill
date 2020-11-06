@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project_ifrill.mapper.QnAMapper">
+	<sql id="selectQnA">
+		SELECT NO, SUBJECT, CONTENT, REP, ID, REP_YN, WRITE_DATE
+	</sql>
+
+	<select id="listQna" resultType="QnA">
+		<include refid="selectQnA"/>
+		FROM QNA
+		WHERE ID=#{id}
+	</select>
+	
+	<select id="getQnA" resultType="QnA" >
+		SELECT NO, SUBJECT, CONTENT, REP, ID, REP_YN, WRITE_DATE 
+		FROM QNA 
+		WHERE NO=#{no}
+	</select>
+	
+	<insert id="insertqna" parameterType="QnA">
+		INSERT INTO QNA (SUBJECT, CONTENT, ID) 
+		VALUES(#{subject}, #{content}, #{id})
+	</insert>
+	
+	
+	<!-- 관리자모드 -->
+	<select id="listAllQnA" resultType="QnA">
+		<include refid="selectQnA"/>
+		FROM QNA ORDER BY WRITE_DATE DESC
+	</select>
+	
+	<update id="updateQnA" parameterType="QnA">
+		UPDATE QNA 
+		SET REP=#{rep}, REP_YN='2' 
+		WHERE NO=#{no}
+	</update>
+</mapper>

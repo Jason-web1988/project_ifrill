@@ -34,4 +34,29 @@
 		WHERE NAME LIKE #{name}
 	</select>
 	
+	
+	<!-- 페이징기법 -->
+	<select id="pageNumber">
+		
+	</select>
+	
+	<select id="listProduct" resultType="Product">
+		SELECT NO, REG_DATE, NAME, PRICE, SALEPRICE , DEL_YN, BEST_YN 
+        FROM PRODUCT 
+        WHERE NAME LIKE #{NAME} ORDER BY NO DESC
+	</select>
+	
+	<insert id="insertProduct" parameterType="Product">
+		INSERT INTO PRODUCT(NAME, KIND, PRICE, SALEPRICE, MARGIN, CONTENT, IMAGE, BEST_YN)
+		VALUES(#{name}, #{kind}, #{price}, #{salePrice}, #{margin}, 
+				#{content}, #{image}, #{bestYn}) 
+	</insert>
+	
+	<update id="updateProduct" parameterType="Product">
+		UPDATE PRODUCT 
+		SET KIND=#{kind}, DEL_YN=#{delYn}, NAME=#{name}, PRICE=#{price}, SALEPRICE=#{salePrice}, 
+				MARGIN= #{margin}, CONTENT=#{content}, IMAGE=#{image}, BEST_YN=#{bestYn} 
+		WHERE NO=#{no} 
+	</update>
+	
 </mapper>

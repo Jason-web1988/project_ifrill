@@ -11,5 +11,5 @@ public interface QnAMapper {
     
     //관리자 모드
     ArrayList<QnA> listAllQnA();
-    void updateQnA(QnA qna);
+    int updateQnA(QnA qna);
 }

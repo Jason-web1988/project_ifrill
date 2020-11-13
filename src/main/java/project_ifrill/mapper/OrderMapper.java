@@ -22,4 +22,5 @@ public interface OrderMapper {
     ArrayList<Orders> listOrders(String memberName);
     
     int updateOrderResult(int orderNo);
+    
 }

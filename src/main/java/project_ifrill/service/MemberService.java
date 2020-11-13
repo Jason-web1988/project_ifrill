@@ -10,9 +10,11 @@ public interface MemberService {
 	
 	ArrayList<Address> showAddressByDong(String dong);
 	
-	int joinMember(Member member);
+	int joinMember(Member member);	//insert 구문A
 	
 	Member getMember(String id);
 	
+	
+	//관리자모드
 	ArrayList<Member> getMemberList(String memberName);
 }

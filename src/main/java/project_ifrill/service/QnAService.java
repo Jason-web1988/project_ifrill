@@ -13,5 +13,5 @@ public interface QnAService {
 
 	public ArrayList<QnA> listAllQnA();
 
-	public void updateQnA(QnA qna);
+	public int updateQnA(QnA qna);
 }

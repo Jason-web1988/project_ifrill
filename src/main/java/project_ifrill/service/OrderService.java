@@ -4,14 +4,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import project_ifrill.dto.Member;
 import project_ifrill.dto.Orders;
 
 public interface OrderService {
-	ArrayList<Integer> selectSeqOrderIng(Member member, String result);
+	ArrayList<Integer> selectSeqOrderIng(Map<String, Object> maps);	//Member member, String result
 	
-	Orders orderListByMember(String memberId, int orderNo, String result);
+	List<Orders> orderListByMember(Map<String, Object> maps);	//String memberId, int orderNo, String result
 	
 	int maxOrderNo();
 	
@@ -19,9 +21,9 @@ public interface OrderService {
 	
 	int updateOrderResult(int orderNo);
 	
-	int addOrderAndDetail(Orders orders);
+	int addOrderAndDetail(Orders orders);	//
 	
-	void rollbackUtill(Connection con, SQLException e);
+	void rollbackUtill(Connection con, SQLException e);//
 	
-	void closeUtil(Connection con, PreparedStatement dPstmt, PreparedStatement tPstmt);
+	void closeUtil(Connection con, PreparedStatement dPstmt, PreparedStatement tPstmt);//
 }

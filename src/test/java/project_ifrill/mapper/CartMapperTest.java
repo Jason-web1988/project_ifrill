@@ -26,7 +26,7 @@ import project_ifrill.dto.Product;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CartMapperTest {
 	protected static final Log log = LogFactory.getLog(CartMapperTest.class);
-
+	
 	@Autowired
 	private CartMapper mapper;
 	

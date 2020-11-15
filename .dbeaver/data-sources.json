@@ -29,19 +29,18 @@
 				"auth-model": "oracle_native"
 			}
 		},
-		"oracle_thin-1758dac2446-5bc6c926328037d1": {
+		"oracle_thin-175a30c55ce-5e00d475be7a5463": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "orcl-i_frill",
+			"name": "xe-i_frill",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
 				"host": "localhost",
 				"port": "1521",
-				"database": "orcl",
-				"url": "jdbc:oracle:thin:@//localhost:1521/orcl",
-				"home": "D:\\app\\lenovo\\product\\11.2.0\\dbhome_1",
+				"database": "xe",
+				"url": "jdbc:oracle:thin:@//localhost:1521/xe",
 				"type": "dev",
 				"provider-properties": {
 					"@dbeaver-check-schema-content@": "false",
@@ -54,21 +53,8 @@
 					"@dbeaver-connection-type@": "BASIC",
 					"@dbeaver-sid-service@": "SERVICE"
 				},
-				"auth-model": "oracle_native"
-			}
-		}
-	},
-	"virtual-models": {
-		"oracle_thin-1758dac2446-5bc6c926328037d1": {
-			"I_FRILL": {
-				":CART": {
-					"constraints": {
-						"VIRTUAL_PK": {
-							"type": "vpk",
-							"useAllColumns": true
-						}
-					}
-				}
+				"auth-model": "oracle_native",
+				"handlers": {}
 			}
 		}
 	},

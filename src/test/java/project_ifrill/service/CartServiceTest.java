@@ -1,6 +1,8 @@
-package project_ifrill.mapper;
+package project_ifrill.service;
 
-import java.util.List;
+import static org.junit.Assert.fail;
+
+import java.util.ArrayList;
 
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
@@ -15,63 +17,56 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import project_ifrill.config.ControllerConfig;
+import project_ifrill.dto.Cart;
 import project_ifrill.dto.Member;
+import project_ifrill.dto.Product;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ControllerConfig.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class MemberMapperTest {
-	protected static final Log log = LogFactory.getLog(MemberMapperTest.class);
-
+public class CartServiceTest {
+	protected static final Log log = LogFactory.getLog(CartServiceTest.class);
+		
 	@Autowired
-	private MemberMapper mapper;
+	private CartService service;
 	
 	@After
 	public void tearDown() throws Exception {
 		System.out.println();
 	}
 	
-
 	@Test
-	public void test02ConfirmID() {
+	public void test01AddCart() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 
-		int res = mapper.confirmID("one");
+		Cart cart = new Cart();
+		cart.setMember(new Member("one"));
+		cart.setProduct(new Product(2));
+		cart.setQuantity(2);
+		
+		int res = service.addCart(cart);
 		Assert.assertEquals(1, res);
 	}
 
 	@Test
-	public void test01GetMember() {
+	public void test03RemoveCart() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 		
-		Member member = mapper.getMember("two");
-		Assert.assertNotNull(member);
-		log.debug(member.toString());
-	}
-
-	@Test
-	public void test03InsertMember() {
-		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
-		Member member = new Member();
-		member.setId("two");
-		member.setPwd("2222");
-		member.setName("이현석");
-		member.setEmail("dlgustjr1024@naver.com");
-		member.setZipNum("704-130");
-		member.setAddress("대구광역시 달서구 용산동 죽전우방");
-		member.setPhone("010-1234-5678");
-		
-		int res = mapper.insertMember(member);
+		int res = service.removeCart(66);
 		Assert.assertEquals(1, res);
+		
 	}
 
 	@Test
-	public void test04ListMember() {
+	public void test02GetCartByMember() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
-
-		List<Member> list = mapper.listMember("김나리");
+		
+		
+		ArrayList<Cart> list = service.getCartByMember("one");
 		Assert.assertNotNull(list);
-		list.forEach(member -> log.debug(member.toString()));
+		
+		list.forEach(cart -> log.debug(cart.toString()));
+		
 	}
 
 }

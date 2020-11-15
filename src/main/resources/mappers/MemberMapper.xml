@@ -27,7 +27,7 @@
 	
 	<select id="getMember" resultType="Member">
 		<include refid="selectSQL"/>
-		<include refid="whereSQL"/>
+		WHERE id=#{id}
 	</select>
 	
 	<select id="confirmID" resultType="int">

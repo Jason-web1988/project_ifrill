@@ -87,7 +87,7 @@ public class ProductServiceTest {
 		
 	}
 
-	@Test
+	@Test	//paging
 	public void test06PageNumber() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 
@@ -113,14 +113,43 @@ public class ProductServiceTest {
 	public void test07InsertProduct() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 
-		fail("Not yet implemented");
+		Product insertProduct = new Product();
+		
+		insertProduct.setName("크록스-1");
+		insertProduct.setKind("3");
+		insertProduct.setPrice(22000);
+		insertProduct.setSalePrice(30000);
+		insertProduct.setMargin(7000);
+		insertProduct.setContent("유용 슬리퍼입니다.");
+		insertProduct.setImage("crocs.jpg");
+		insertProduct.setBestYn("N");
+		
+		int res = service.insertProduct(insertProduct);	
+		Assert.assertEquals(1, res);
+		
+		log.debug(insertProduct.toString());
 	}
 
 	@Test
 	public void test08UpdateProduct() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 
-		fail("Not yet implemented");
+		Product upProduct = new Product();
+		
+		upProduct.setName("코록소-수정");
+		upProduct.setKind("4");
+		upProduct.setPrice(10000);
+		upProduct.setSalePrice(25000);
+		upProduct.setMargin(15000);
+		upProduct.setContent("수정수정중입니다.");
+		upProduct.setImage("crocs.jpg");
+		upProduct.setDelYn("N");
+		upProduct.setBestYn("N");
+		upProduct.setNo(25);
+		
+		int res = service.updateProduct(upProduct);
+		
+		log.debug(upProduct.toString());
 	}
 
 }

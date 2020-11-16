@@ -9,11 +9,7 @@ import org.springframework.context.annotation.Import;
 @Import({ ContextDataSource.class, ContextSqlSession.class })
 @ComponentScan(basePackages = {"project_ifrill.controller",
 								"project_ifrill.mapper",
-								"project_ifrill.service"
-		/*
-		 * "gradle_spring_webmvc_study.service", "gradle_spring_webmvc_study.spring",
-		 * "gradle_spring_webmvc_study.survey", "gradle_spring_webmvc_study.common"
-		 */})
+								"project_ifrill.service"})
 public class ControllerConfig {
 
 }

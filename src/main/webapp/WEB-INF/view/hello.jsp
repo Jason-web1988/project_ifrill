@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	인사말 : ${greeting }
+	<h1>테스트 페이지입니다.</h1>
 </body>
 </html>

@@ -29,18 +29,19 @@
 				"auth-model": "oracle_native"
 			}
 		},
-		"oracle_thin-175a30c55ce-5e00d475be7a5463": {
+		"oracle_thin-175cfbbe452-7f5ec4322668106d": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "xe-i_frill",
+			"name": "orcl-i_frill",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
 				"host": "localhost",
 				"port": "1521",
-				"database": "xe",
-				"url": "jdbc:oracle:thin:@//localhost:1521/xe",
+				"database": "orcl",
+				"url": "jdbc:oracle:thin:@//localhost:1521/orcl",
+				"home": "D:\\app\\lenovo\\product\\11.2.0\\dbhome_1",
 				"type": "dev",
 				"provider-properties": {
 					"@dbeaver-check-schema-content@": "false",

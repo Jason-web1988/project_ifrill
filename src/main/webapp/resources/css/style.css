@@ -1,0 +1,59 @@
+@charset "UTF-8";
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.split {
+    height: 1em;
+}
+
+#div-btn{
+	width: 95%;
+	max-width: 850px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+table {
+    width: 95%;
+    max-width: 850px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-top: 2px solid #ff3030;
+    text-align: center;
+}
+
+table thead td {
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-top: 0;
+    background: #f3f3f3;
+    padding: 15px 5px;
+}
+
+table tbody td {
+    padding: 5px 5px;
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+
+.submit, .cancel {
+    height: 30px; /* 버튼의 세로 크기를 정의합니다. */
+    width: 150px; /* 버튼의 가로 크기를 정의합니다. */
+    border: 1px solid #666; /* 버튼의 테두리를 정의합니다. */
+    border-radius: 10px; /* border-radius를 통해 버튼을 둥그렇게 만듭니다. */
+    box-shadow: 3px 3px 2px #ccc; /* box-shadow를 이용해서 그림자를 만듭니다. */
+    font-size: 14px; /* 글꼴 사이즈를 조절합니다. */
+    background-repeat: repeat-x;
+    background-position: center center;
+    margin: 20px 0 10px 20px;
+}
+
+div .btn {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}

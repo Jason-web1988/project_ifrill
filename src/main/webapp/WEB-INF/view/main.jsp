@@ -4,7 +4,30 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>메인 화면</title>
+<script type="text/javascript" 
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var contextPath ="<%=request.getContextPath()%>";
+	
+	$.get(contextPath+"/api/bestProducts", function(json){
+		var dataLength = json.length;
+		if(dataLength >=1){
+			var sCont ="";
+			for(i=0; i<dataLength; i++){
+				sCont += "<tr>";
+				sCont += "<td>" + json[i].no + "</td>";
+				sCont += "<td>" + json[i].name + "</td>";
+				sCont += "<td>" + json[i].salePrice + "</td">;
+				sCont += "<td>" + json[i].image +"</td>";
+				sCont += "</tr>" 
+			}
+			$("#newLoad:last-child").append(sCont);
+		}
+	});
+})
+</script>
 </head>
 <body>
 <%@ include file="header.jsp" %>
@@ -19,16 +42,19 @@
 
   <div id="front">   
     <h2> New Item</h2>     
-    <div id="bestProduct">         
-      <c:forEach items="${newProductList }"  var="product">
+    <div id="newProduct">    
+     <%-- <c:forEach items="${bestProductList}"  var="product"> --%>
+        
         <div id="item">
+   		 <tbody id = newLoad></tbody> 
           <a href="productDetail.do?no=${product.no}">
             <img src="product_images/${product.image}" />
             <h3> ${product.name} </h3>    
             <p>${product.salePrice} </p>
           </a>    
         </div>
-      </c:forEach>      
+        
+         <%-- </c:forEach> --%>
     </div>
    <div class="clear"></div>
    

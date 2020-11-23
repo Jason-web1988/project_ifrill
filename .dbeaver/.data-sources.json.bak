@@ -1,19 +1,19 @@
 {
 	"folders": {},
 	"connections": {
-		"oracle_thin-1758d82b994-73fe868b2f849e51": {
+		"oracle_thin-175da54e0f7-6e107a9d97b315f2": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "orcl-system",
+			"name": "xe-system",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
 				"host": "localhost",
 				"port": "1521",
-				"database": "orcl",
-				"url": "jdbc:oracle:thin:@//localhost:1521/orcl",
-				"home": "D:\\app\\lenovo\\product\\11.2.0\\dbhome_1",
+				"database": "xe",
+				"url": "jdbc:oracle:thin:@//localhost:1521/xe",
+				"home": "C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server",
 				"type": "dev",
 				"provider-properties": {
 					"@dbeaver-check-schema-content@": "false",
@@ -23,13 +23,14 @@
 					"@dbeaver-meta-use-simple-constraints@": "false",
 					"@dbeaver-use-rule-hint@": "false",
 					"@dbeaver-use-meta-optimizer@": "false",
+					"@dbeaver-meta-use-alternative-table-query@": "false",
 					"@dbeaver-connection-type@": "BASIC",
 					"@dbeaver-sid-service@": "SERVICE"
 				},
 				"auth-model": "oracle_native"
 			}
 		},
-		"oracle_thin-175a30c55ce-5e00d475be7a5463": {
+		"oracle_thin-175da5c1c17-67bcc10d578d48f6": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
 			"name": "xe-i_frill",
@@ -41,6 +42,7 @@
 				"port": "1521",
 				"database": "xe",
 				"url": "jdbc:oracle:thin:@//localhost:1521/xe",
+				"home": "C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server",
 				"type": "dev",
 				"provider-properties": {
 					"@dbeaver-check-schema-content@": "false",
@@ -50,34 +52,7 @@
 					"@dbeaver-meta-use-simple-constraints@": "false",
 					"@dbeaver-use-rule-hint@": "false",
 					"@dbeaver-use-meta-optimizer@": "false",
-					"@dbeaver-connection-type@": "BASIC",
-					"@dbeaver-sid-service@": "SERVICE"
-				},
-				"auth-model": "oracle_native"
-			}
-		},
-		"oracle_thin-175cfbbe452-7f5ec4322668106d": {
-			"provider": "oracle",
-			"driver": "oracle_thin",
-			"name": "orcl-i_frill",
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"host": "localhost",
-				"port": "1521",
-				"database": "orcl",
-				"url": "jdbc:oracle:thin:@//localhost:1521/orcl",
-				"home": "D:\\app\\lenovo\\product\\11.2.0\\dbhome_1",
-				"type": "dev",
-				"provider-properties": {
-					"@dbeaver-check-schema-content@": "false",
-					"@dbeaver-always-show-dba@": "false",
-					"@dbeaver-always-use-dba-views@": "false",
-					"@dbeaver-meta-use-sys-schema@": "false",
-					"@dbeaver-meta-use-simple-constraints@": "false",
-					"@dbeaver-use-rule-hint@": "false",
-					"@dbeaver-use-meta-optimizer@": "false",
+					"@dbeaver-meta-use-alternative-table-query@": "false",
 					"@dbeaver-connection-type@": "BASIC",
 					"@dbeaver-sid-service@": "SERVICE"
 				},

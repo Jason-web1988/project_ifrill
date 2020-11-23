@@ -19,14 +19,13 @@ import project_ifrill.service.OrderService;
 @Controller
 @RequestMapping("/order")
 public class OrderController {
-	private static final Log log = LogFactory.getLog(OrderController.class);
 
 	@Autowired
 	private OrderService service;
 	
 	@RequestMapping(value = "/selectSeqOrderIng", method = RequestMethod.GET)
 	public ArrayList<Integer> selectSeqOrderIng(@RequestParam Map<String, Object> param){
-		String url = "mypage/mypage.jsp";
+//		String url = "mypage/mypage.jsp";
 		
 		String id = (String) param.get("MemberId");
 		String result = (String) param.get("result");

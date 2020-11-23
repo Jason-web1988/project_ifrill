@@ -1,7 +1,5 @@
 package project_ifrill.service;
 
-import static org.junit.Assert.*;
-
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.junit.After;
@@ -14,7 +12,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import project_ifrill.config.ControllerConfig;
 import project_ifrill.dto.Worker;
-import project_ifrill.service.impl.WorkerServiceImplTest;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ControllerConfig.class })

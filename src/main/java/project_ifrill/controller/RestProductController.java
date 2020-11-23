@@ -35,6 +35,7 @@ public class RestProductController {
 		System.out.println("getProduct()");
 		Product product = service.getProduct(no);
 		
+	
 		if(product == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}

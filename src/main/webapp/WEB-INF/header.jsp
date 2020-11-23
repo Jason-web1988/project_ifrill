@@ -9,9 +9,9 @@
   <title>Nonage Shop</title>
   <link href="resources/css/shopping.css" rel="stylesheet"> 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-  <script type="text/javascript" src="member/member.js"></script>
+<!--   <script type="text/javascript" src="member/member.js"></script>
   <script type="text/javascript" src="mypage/mypage.js"></script> 
-  <script type="text/javascript" src="product/product.js"></script> 
+  <script type="text/javascript" src="product/product.js"></script>  -->
 </head>
 
 <body>
@@ -20,7 +20,7 @@
   <header>
     <!--로고 들어가는 곳 시작--->  
     <div id="logo">
-      <a href="index.do">
+      <a href="main">
         <img src="images/logo.gif" width="180" height="100" alt="nonageshop">
       </a>  
     </div>

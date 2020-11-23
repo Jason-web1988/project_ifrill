@@ -6,7 +6,7 @@ body{
 }
 
 #wrap{
-    width:971px; /* 각 웹 페이지 크기에 맞게 사이즈 조정 */
+    width:971px; /* 媛� �쎒 �럹�씠吏� �겕湲곗뿉 留욊쾶 �궗�씠利� 議곗젙 */
     text-align:left;
     margin:0;
     margin-right:auto;
@@ -32,15 +32,15 @@ nav#catagory_menu{
 }
 
 table#cartList {
-    border-collapse:collapse;    /* border 사이의 간격 없앰 */
+    border-collapse:collapse;    /* border �궗�씠�쓽 媛꾧꺽 �뾾�빊 */
     border-top: 2px solid  #333;    
     border-bottom: 1px solid  #333; 
-    width:100%;                  /* 전체 테이블 길이 설정 */
+    width:100%;                  /* �쟾泥� �뀒�씠釉� 湲몄씠 �꽕�젙 */
     margin-bottom: 20px;
 }
 
 table#cartList th, td{	
-    border-bottom: 1px dotted  #333; 
+   /*  border-bottom: 1px dotted  #333;  */
 	text-align: center;
 }
 
@@ -52,7 +52,7 @@ nav#catagory_menu ul li{
 	display:block; 
     height:30px;
     float:left;
-    font-family: 굴림;
+    font-family: 援대┝;
 }
 
 nav#catagory_menu a{
@@ -111,7 +111,7 @@ article h2, div h2{
 	font-size: 30px; 
 	color: #CCC;
 	padding-bottom: 15px;
-	border-bottom: 1px dotted #666; /* 제목 하단 부에 점선을 넣어 제목이라는 것을 표시해 줍니다. */	
+	border-bottom: 1px dotted #666; /* �젣紐� �븯�떒 遺��뿉 �젏�꽑�쓣 �꽔�뼱 �젣紐⑹씠�씪�뒗 寃껋쓣 �몴�떆�빐 以띾땲�떎. */	
 }
 
 
@@ -132,7 +132,6 @@ article h2, div h2{
     min-height:900px; 
     background:#ebebeb;
     padding:10px;
-    text-align: center;
 }
 
 #item{
@@ -145,6 +144,11 @@ article h2, div h2{
 	width: 190px; 
 	height : 200px; 
 }
+
+#item td{
+	width: 100%;
+}
+
 
 #itemdetail  img{
 	width: 190px; 
@@ -233,6 +237,7 @@ div#front{
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+
 article {
 	float: right;
 	width: 680px;
@@ -285,23 +290,23 @@ form fieldset {
 }
 
 form fieldset legend {
-	font-size: 20px; /* 제목으로 사용되기 때문에 크기를 크게 잡아 줍니다. */
-	border-bottom: 1px dotted #666; /* 제목 하단 부에 점선을 넣어 제목이라는 것을 표시해 줍니다. */
-	width: 600px; /* 전체 크기를 잡아 줍니다. */
-	padding: 5px 0; /* 위와 아래로 여백을 주고 좌우로는 여백을 없애버립니다. 
-                                      여백을 안 주게 되면 밑줄과 너무 붙어버려 보기에 좋지 않습니다. */
+	font-size: 20px; /* �젣紐⑹쑝濡� �궗�슜�릺湲� �븣臾몄뿉 �겕湲곕�� �겕寃� �옟�븘 以띾땲�떎. */
+	border-bottom: 1px dotted #666; /* �젣紐� �븯�떒 遺��뿉 �젏�꽑�쓣 �꽔�뼱 �젣紐⑹씠�씪�뒗 寃껋쓣 �몴�떆�빐 以띾땲�떎. */
+	width: 600px; /* �쟾泥� �겕湲곕�� �옟�븘 以띾땲�떎. */
+	padding: 5px 0; /* �쐞�� �븘�옒濡� �뿬諛깆쓣 二쇨퀬 醫뚯슦濡쒕뒗 �뿬諛깆쓣 �뾾�븷踰꾨┰�땲�떎. 
+                                      �뿬諛깆쓣 �븞 二쇨쾶 �릺硫� 諛묒쨪怨� �꼫臾� 遺숈뼱踰꾨젮 蹂닿린�뿉 醫뗭� �븡�뒿�땲�떎. */
 }
 
 form label {
-	width: 140px; /* 전체의 크기를 정의합니다. */
-	float: left; /* 왼쪽으로 이동시킵니다. */
-	margin: 5px 0; /* 마진을 이용해서 상하로 간격을 줍니다. */
+	width: 140px; /* �쟾泥댁쓽 �겕湲곕�� �젙�쓽�빀�땲�떎. */
+	float: left; /* �쇊履쎌쑝濡� �씠�룞�떆�궢�땲�떎. */
+	margin: 5px 0; /* 留덉쭊�쓣 �씠�슜�빐�꽌 �긽�븯濡� 媛꾧꺽�쓣 以띾땲�떎. */
 }
 
 form input {
-	margin: 5px 0; /* label과 마찬가지로 여기도 동일하게 상하로 간격을 줍니다. */
-	border: 1px solid #999; /* input 박스의 테두리 모양을 정의해 줍니다. */
-	background-color: #FCFDEA; /* 배경색을 이용하여 바탕화면 색과 차별을 줍니다. */
+	margin: 5px 0; /* label怨� 留덉갔媛�吏�濡� �뿬湲곕룄 �룞�씪�븯寃� �긽�븯濡� 媛꾧꺽�쓣 以띾땲�떎. */
+	border: 1px solid #999; /* input 諛뺤뒪�쓽 �뀒�몢由� 紐⑥뼇�쓣 �젙�쓽�빐 以띾땲�떎. */
+	background-color: #FCFDEA; /* 諛곌꼍�깋�쓣 �씠�슜�븯�뿬 諛뷀깢�솕硫� �깋怨� 李⑤퀎�쓣 以띾땲�떎. */
 }
 
 form input.id {
@@ -310,17 +315,17 @@ form input.id {
 }
 
 form input.dup {
-	width: 90px; /* 버튼의 가로 크기를 정합니다. */
-	height: 23px; /* 버튼의 세로 크기를 정합니다. */
-	border-radius: 8px; /* border-radius 통해 둥그런 버튼으로 만듭니다. */
-	border: none; /* 배경 이미지가 어둡기 때문에 여기서 border는 없애버리겠습니다. */
-	margin: 0 0 0 5px; /* 마진을 왼쪽만 줘서 input과의 간격을 벌립니다. */
-	font-weight: bold; /* 글꼴 두께를 두껍게 */
-	color: #FFF; /* 글꼴의 색상은 흰색으로 */
+	width: 90px; /* 踰꾪듉�쓽 媛�濡� �겕湲곕�� �젙�빀�땲�떎. */
+	height: 23px; /* 踰꾪듉�쓽 �꽭濡� �겕湲곕�� �젙�빀�땲�떎. */
+	border-radius: 8px; /* border-radius �넻�빐 �뫁洹몃윴 踰꾪듉�쑝濡� 留뚮벊�땲�떎. */
+	border: none; /* 諛곌꼍 �씠誘몄�媛� �뼱�몼湲� �븣臾몄뿉 �뿬湲곗꽌 border�뒗 �뾾�븷踰꾨━寃좎뒿�땲�떎. */
+	margin: 0 0 0 5px; /* 留덉쭊�쓣 �쇊履쎈쭔 以섏꽌 input怨쇱쓽 媛꾧꺽�쓣 踰뚮┰�땲�떎. */
+	font-weight: bold; /* 湲�瑗� �몢猿섎�� �몢猿띻쾶 */
+	color: #FFF; /* 湲�瑗댁쓽 �깋�긽�� �씛�깋�쑝濡� */
 	background-image: url(../images/dup.jpg);
-	/* 백그라운드 이미지를 사용합니다. */
-	background-repeat: repeat-x; /* 백그라운드 이미지를 x축으로 반복 */
-	background-position: center center; /* 백그라운드 이미지의 위치를 중앙으로 위치 */
+	/* 諛깃렇�씪�슫�뱶 �씠誘몄�瑜� �궗�슜�빀�땲�떎. */
+	background-repeat: repeat-x; /* 諛깃렇�씪�슫�뱶 �씠誘몄�瑜� x異뺤쑝濡� 諛섎났 */
+	background-position: center center; /* 諛깃렇�씪�슫�뱶 �씠誘몄��쓽 �쐞移섎�� 以묒븰�쑝濡� �쐞移� */
 }
 
 form #buttons {
@@ -328,12 +333,12 @@ form #buttons {
 }
 
 .submit, .cancel {
-	height: 30px; /* 버튼의 세로 크기를 정의합니다. */
-	width: 150px; /* 버튼의 가로 크기를 정의합니다. */
-	border: 1px solid #666; /* 버튼의 테두리를 정의합니다. */
-	border-radius: 10px; /* border-radius를 통해 버튼을 둥그렇게 만듭니다. */
-	box-shadow: 3px 3px 2px #ccc; /* box-shadow를 이용해서 그림자를 만듭니다. */
-	font-size: 14px; /* 글꼴 사이즈를 조절합니다. */
+	height: 30px; /* 踰꾪듉�쓽 �꽭濡� �겕湲곕�� �젙�쓽�빀�땲�떎. */
+	width: 150px; /* 踰꾪듉�쓽 媛�濡� �겕湲곕�� �젙�쓽�빀�땲�떎. */
+	border: 1px solid #666; /* 踰꾪듉�쓽 �뀒�몢由щ�� �젙�쓽�빀�땲�떎. */
+	border-radius: 10px; /* border-radius瑜� �넻�빐 踰꾪듉�쓣 �뫁洹몃젃寃� 留뚮벊�땲�떎. */
+	box-shadow: 3px 3px 2px #ccc; /* box-shadow瑜� �씠�슜�빐�꽌 洹몃┝�옄瑜� 留뚮벊�땲�떎. */
+	font-size: 14px; /* 湲�瑗� �궗�씠利덈�� 議곗젅�빀�땲�떎. */
 	background-repeat: repeat-x;
 	background-position: center center;
 	color: #fff;
@@ -347,3 +352,5 @@ form #buttons {
 .cancel {
 	background-image: url(../images/cancel_back.jpg);	
 }
+
+

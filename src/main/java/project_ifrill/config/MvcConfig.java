@@ -39,7 +39,7 @@ public class MvcConfig implements WebMvcConfigurer{
 	/** JSP를 통해서 컨트롤러의 실행 결과를 보여주기 위한 설정 */
 	@Override
 	public void configureViewResolvers(ViewResolverRegistry registry) {
-		registry.jsp("/WEB-INF/view/", ".jsp");
+		registry.jsp("/WEB-INF/", ".jsp");
 	}
 	
 	/*컨트롤러 구현 없는 경로 매핑
@@ -47,9 +47,8 @@ public class MvcConfig implements WebMvcConfigurer{
 	 */
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/test").setViewName("/hello");
 		registry.addViewController("/main").setViewName("/main");
-//		registry.addViewController("/memberList").setViewName("/rest/list");
+		registry.addViewController("/productDetail").setViewName("/product/productDetail");
 	}
 	
 	

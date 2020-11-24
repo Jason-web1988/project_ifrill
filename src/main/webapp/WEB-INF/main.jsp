@@ -9,6 +9,11 @@
 <script type="text/javascript">
 $(function() {
 		var contextPath = "<%=request.getContextPath()%>";
+		
+		 function numberFormat(inputNumber){		//천단위 ","해주기
+	         return inputNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	      }
+		 
 		$.get(contextPath+"/api/newProducts", function(json) {
 			var dataLength = json.length;
 			if (dataLength >= 1) {
@@ -16,9 +21,9 @@ $(function() {
 				for (i = 0; i < dataLength; i++) {
 					sCont += "<td><a href ='productDetail?id=" + json[i].no + "'>" + "<img src= "+ json[i].image + ">" + "</a>";
 					/* sCont += "<td><a href ='read?id=" + json[i].no + "'>" + json[i].no + "</a></td>"; */
-					sCont += "<a href ='read?id=" + json[i].no + "'>"+ json[i].name + "</a>"; 
+					sCont += "<a href ='productDetail?id=" + json[i].no + "'>"+ json[i].name + "</a>"; 
 					sCont +="  ";
-					sCont += "<a href ='read?id=" + json[i].no + "'>" + json[i].salePrice + "</a></td>";
+					sCont += "<a href ='productDetail?id=" + json[i].no + "'>" + numberFormat(json[i].salePrice) + "</a></td>";
 				}
 				$("#newLoad:last-child").append(sCont); 
 			}
@@ -29,11 +34,11 @@ $(function() {
 			if (dataLength >= 1) {
 				var sCont = "";
 				for (i = 0; i < dataLength; i++) {
-					sCont += "<td><a href ='read?id=" + json[i].no + "'>" + "<img src= "+ json[i].image + ">" + "</a>";
+					sCont += "<td><a href ='productDetail?id=" + json[i].no + "'>" + "<img src= "+ json[i].image + ">" + "</a>";
 					/* sCont += "<td><a href ='read?id=" + json[i].no + "'>" + json[i].no + "</a></td>"; */
-					sCont += "<a href ='read?id=" + json[i].no + "'>"+ json[i].name + "</a>"; 
+					sCont += "<a href ='productDetail?id=" + json[i].no + "'>"+ json[i].name + "</a>"; 
 					sCont +="  ";
-					sCont += "<a href ='read?id=" + json[i].no + "'>" + json[i].salePrice + "</a></td>";
+					sCont += "<a href ='productDetail?id=" + json[i].no + "'>" + numberFormat(json[i].salePrice) + "</a></td>";
 				}
 				$("#bestLoad:last-child").append(sCont); 
 			}

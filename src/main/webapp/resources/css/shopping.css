@@ -340,17 +340,17 @@ form #buttons {
 	box-shadow: 3px 3px 2px #ccc; /* box-shadow瑜� �씠�슜�빐�꽌 洹몃┝�옄瑜� 留뚮벊�땲�떎. */
 	font-size: 14px; /* 湲�瑗� �궗�씠利덈�� 議곗젅�빀�땲�떎. */
 	background-repeat: repeat-x;
-	background-position: center center;
-	color: #fff;
+	background-position: center;
+	color: #080808;
 	margin: 0 0 0 20px;
 }
 
 .submit {
 	background-image: url(../images/submit_back.jpg);
-}
+} 
 
 .cancel {
 	background-image: url(../images/cancel_back.jpg);	
-}
+} 
 
 

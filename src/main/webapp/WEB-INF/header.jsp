@@ -51,7 +51,7 @@
          <a href="mypage.do">MY PAGE</a>
        </li><li>/</li>
        <li>
-         <a href="qnaList.do">Q&amp;A(1:1)</a>
+         <a href="qnaBoard">Q&amp;A(1:1)</a>
        </li>
      </ul>
     </nav>

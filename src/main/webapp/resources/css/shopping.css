@@ -306,7 +306,7 @@ form label {
 form input {
 	margin: 5px 0; /* label怨� 留덉갔媛�吏�濡� �뿬湲곕룄 �룞�씪�븯寃� �긽�븯濡� 媛꾧꺽�쓣 以띾땲�떎. */
 	border: 1px solid #999; /* input 諛뺤뒪�쓽 �뀒�몢由� 紐⑥뼇�쓣 �젙�쓽�빐 以띾땲�떎. */
-	background-color: #FCFDEA; /* 諛곌꼍�깋�쓣 �씠�슜�븯�뿬 諛뷀깢�솕硫� �깋怨� 李⑤퀎�쓣 以띾땲�떎. */
+	background-color: #f90; /* 諛곌꼍�깋�쓣 �씠�슜�븯�뿬 諛뷀깢�솕硫� �깋怨� 李⑤퀎�쓣 以띾땲�떎. */
 }
 
 form input.id {

@@ -7,10 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 상세</title>
-<script type="text/javascript" 
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	alert("상품번호 no >> " + ${param.id})
@@ -52,7 +49,6 @@ $(function(){
             	<img src="product_images/${product.image}"  /> 
             </span>              
             <h2> ${product.name} </h2>  
-          </a>    
           <label> 가 격 :  </label>  
           <p> ${product.salePrice} 원</p>  
           <label> 수 량 : </label>

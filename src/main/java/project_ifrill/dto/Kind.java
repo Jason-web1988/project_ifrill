@@ -5,7 +5,6 @@ public class Kind {
     private String name;
 
     public Kind() {
-        // TODO Auto-generated constructor stub
     }
 
     public Kind(int no, String name) {

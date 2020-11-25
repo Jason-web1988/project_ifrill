@@ -7,7 +7,6 @@ public class Worker {
     private String phone;
 
     public Worker() {
-        // TODO Auto-generated constructor stub
     }
 
     public Worker(String id, String pwd) {

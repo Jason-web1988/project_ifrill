@@ -14,7 +14,6 @@ public class Member {
 	private Date joinDate;/* 가입일 */
 
 	public Member() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Member(String id) {

@@ -1,40 +1,10 @@
 {
 	"folders": {},
 	"connections": {
-		"oracle_thin-175fe12ad98-3b72c219183ddc5f": {
+		"oracle_thin-175fe1c8d16-55cb26571f1fc8cd": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "xe - system",
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"host": "localhost",
-				"port": "1521",
-				"database": "xe",
-				"url": "jdbc:oracle:thin:@//localhost:1521/xe",
-				"home": "C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server",
-				"type": "dev",
-				"provider-properties": {
-					"@dbeaver-check-schema-content@": "false",
-					"@dbeaver-always-show-dba@": "false",
-					"@dbeaver-always-use-dba-views@": "false",
-					"@dbeaver-meta-use-sys-schema@": "false",
-					"@dbeaver-meta-use-simple-constraints@": "false",
-					"@dbeaver-use-rule-hint@": "false",
-					"@dbeaver-use-meta-optimizer@": "false",
-					"@dbeaver-meta-use-alternative-table-query@": "false",
-					"@dbeaver-connection-type@": "BASIC",
-					"@dbeaver-sid-service@": "SERVICE"
-				},
-				"auth-model": "oracle_native",
-				"handlers": {}
-			}
-		},
-		"oracle_thin-175fe1377b9-66c9b096a622c596": {
-			"provider": "oracle",
-			"driver": "oracle_thin",
-			"name": "xe - I_FRILL",
+			"name": "xe",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,

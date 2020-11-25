@@ -31,7 +31,7 @@ $(function(){
 <%@ include file="sub_menu.jsp" %>  
   <article>
     <h2> Item</h2>     
-    <c:forEach items="${productKindList }"  var="product">
+    <%-- <c:forEach items="${productKindList }"  var="product">
       <div id="item">
         <a href="productDetail.do?no=${product.no}"> 
           <img src="product_images/${product.image}" />
@@ -39,7 +39,7 @@ $(function(){
           <p>${product.salePrice} </p>
         </a>  
       </div>
-    </c:forEach>    
+    </c:forEach> --%>    
     <div class="clear"></div>
   </article>
 <%@ include file="../footer.jsp" %>   

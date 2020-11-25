@@ -67,7 +67,7 @@ $(function(){
          <a href="cartList.do">CART</a>
        </li><li>/</li>
        <li>
-         <a href="mypage.do">MY PAGE</a>
+         <a href="mypage">MY PAGE</a>
        </li><li>/</li>
        <li>
          <a href="qnaList.do">Q&amp;A(1:1)</a>

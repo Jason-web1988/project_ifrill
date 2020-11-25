@@ -1,7 +1,7 @@
 package project_ifrill.controller;
 
 import java.net.URI;
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import project_ifrill.dto.Cart;
-import project_ifrill.dto.Member;
 import project_ifrill.exception.DuplicateException;
 import project_ifrill.service.CartService;
 
@@ -29,7 +28,7 @@ public class RestCartController {
 	@GetMapping("/getCartByMember/{mId}")
 	public ResponseEntity<Object> getCartByMember(@PathVariable("mId") String mId){
 		System.out.println("getCartByMember() mId >> " + mId);
-		ArrayList<Cart> list = service.getCartByMember(mId);
+		List<Cart> list = service.getCartByMember(mId);
 		
 		if(list == null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();

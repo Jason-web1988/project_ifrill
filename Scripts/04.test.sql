@@ -6,6 +6,7 @@ SELECT * FROM MEMBER;
 SELECT count(*) FROM address;
 
 select ZIP_NUM, SIDO, GUGUN, DONG, ZIP_CODE, BUNJI from address where dong like '%구암동%';
+select ZIP_NUM, SIDO, GUGUN, DONG, ZIP_CODE, BUNJI from address where SIDO like '%대구%';
 
 -- cart
 insert into cart(memberid, pno, quantity) values('one', 1, 1);

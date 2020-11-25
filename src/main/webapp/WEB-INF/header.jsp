@@ -18,7 +18,7 @@ $(function(){
 	    if ( dataLength >=1 ){
 	        var sCont = "<ul>";
 	        for ( i=0 ; i < dataLength ; i++){
-	            sCont += "<li><a href=productKind?no=" + json[i].no + ">" + json[i].name + "</a></li>";
+	            sCont += "<li><a href=productKind?kind=" + json[i].no + ">" + json[i].name + "</a></li>";
 	        }
 	        sCont += "</ul>";
 	         if ($("#top_menu").has("ul").length < 1){    

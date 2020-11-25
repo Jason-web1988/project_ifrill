@@ -10,16 +10,27 @@ src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script
 <script type="text/javascript">
 $(function(){
 	var contextPath = "<%=request.getContextPath()%>";
+	alert("상품종류 번호는 >> " + ${param.kind});
+	var kind = ${param.kind};
 	
-	 function numberFormat(inputNumber){		//천단위 ","해주기
+	function numberFormat(inputNumber){		//천단위 ","해주기
          return inputNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       }
-	 $.get(contextPath + "/api/getProduct/"+no, function(json){
-		 var dataLength = json.length;
-		 if(dataLength >= 1){
-			 var sCont = "<ul>";
-			 
-		 }
+	
+	 $.get(contextPath+"/api/kindProducts/"+ kind , function(json){
+		 alert("json >> " + json);
+		var dataLength = json.length;
+		if (dataLength >= 1) {
+			var sCont = "";
+			for (i = 0; i < dataLength; i++) {
+				sCont += "<td><a href ='productDetail?id=" + json[i].no + "'>" + "<img src= "+ json[i].image + ">" + "</a>";
+				/* sCont += "<td><a href ='read?id=" + json[i].no + "'>" + json[i].no + "</a></td>"; */
+				sCont += "<a href ='productDetail?id=" + json[i].no + "'>"+ json[i].name + "</a>"; 
+				sCont +="  ";
+				sCont += "<a href ='productDetail?id=" + json[i].no + "'>" + numberFormat(json[i].salePrice) + "</a></td>";
+			}
+			$("#kindProducts:last-child").append(sCont); 
+		 };
 	 });
 });
 
@@ -31,15 +42,13 @@ $(function(){
 <%@ include file="sub_menu.jsp" %>  
   <article>
     <h2> Item</h2>     
-    <c:forEach items="${productKindList }"  var="product">
       <div id="item">
-        <a href="productDetail.do?no=${product.no}"> 
-          <img src="product_images/${product.image}" />
-          <h3>${product.name} </h3>        
-          <p>${product.salePrice} </p>
-        </a>  
+      	<table>
+      		<thead>
+      		</thead>
+      		<tbody id="kindProducts"></tbody>
+      	</table>
       </div>
-    </c:forEach>    
     <div class="clear"></div>
   </article>
 <%@ include file="../footer.jsp" %>   

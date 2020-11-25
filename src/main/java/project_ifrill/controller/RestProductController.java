@@ -1,5 +1,6 @@
 package project_ifrill.controller;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -46,10 +47,10 @@ public class RestProductController {
 		return ResponseEntity.ok(product);
 	}
 	
-	@GetMapping("/kindProducts/{name}")
-	public ResponseEntity<Object> kindProducts(@PathVariable("name") String name){
+	@GetMapping("/kindProducts/{kind}")
+	public ResponseEntity<Object> kindProducts(@PathVariable String kind){
 		System.out.println("kindProducts()");
-		return ResponseEntity.ok(service.kindProducts(name));
+		return ResponseEntity.ok(service.kindProducts(kind));
 	}
 	
 	@GetMapping("/kindList")		//목록불러오기!

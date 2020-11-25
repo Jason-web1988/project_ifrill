@@ -26,7 +26,7 @@ $(function(){
 			$("#name").append(sContName);
 			
 			var sContNo = "";
-				sContNo = json.name;
+				sContNo = json.no;
 			$("#no").append(sContNo);
 			
 			var sContImage = "";

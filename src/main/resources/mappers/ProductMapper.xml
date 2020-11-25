@@ -25,7 +25,7 @@
 	<select id="listKindProduct" resultType="Product">
 		SELECT NO, NAME, KIND, PRICE, SALEPRICE, MARGIN, CONTENT, IMAGE, DEL_YN, BEST_YN, REG_DATE 
         FROM PRODUCT
-        WHERE kind=#{kind}
+        WHERE KIND=#{kind}
 	</select>
 	
 	<select id="totalRecord" resultType="integer">

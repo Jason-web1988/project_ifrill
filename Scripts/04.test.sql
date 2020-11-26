@@ -6,6 +6,7 @@ SELECT * FROM MEMBER;
 SELECT count(*) FROM address;
 
 select ZIP_NUM, SIDO, GUGUN, DONG, ZIP_CODE, BUNJI from address where dong like '%구암동%';
+select ZIP_NUM, SIDO, GUGUN, DONG, ZIP_CODE, BUNJI from address where SIDO like '%대구%';
 
 -- cart
 insert into cart(memberid, pno, quantity) values('one', 1, 1);
@@ -170,4 +171,7 @@ SELECT NO, MEMBERID, PNO, MNAME, PNAME, QUANTITY, REG_DATE, SALEPRICE, RESULT
 SELECT NO, NAME, KIND, PRICE, SALEPRICE, MARGIN, CONTENT, IMAGE, DEL_YN, BEST_YN, REG_DATE
         FROM PRODUCT 
         WHERE kind= 5;		
+       
+------------- 2020/11/26 윤한석 MemberList 출력 (MemberInfo 만들려고) -------------
+SELECT * FROM MEMBER;
        

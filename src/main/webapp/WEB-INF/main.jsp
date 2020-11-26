@@ -26,7 +26,7 @@ $(function() {
 					sCont +="  ";
 					sCont += "<a href ='productDetail?id=" + json[i].no + "'>" + numberFormat(json[i].salePrice) + "</a></td>";
 				}
-				$("#newLoad:last-child").append(sCont); 
+				$("#newLoad:last-child").append(sCont);
 			}
 		});
 		

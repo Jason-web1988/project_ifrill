@@ -1,5 +1,8 @@
 eclipse.preferences.version=1
+encoding//Scripts/01_GRANT.sql=UTF-8
 encoding//src/main/resources/message/label.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/mypage/confirmPass.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/mypage/mypage.jsp=UTF-8
 encoding//src/main/webapp/resources/css/shopping.css=UTF-8
 encoding/<project>=UTF-8
 encoding/i_frill\uC6A9\uC5B4\uC0AC\uC804.xdic=utf-8

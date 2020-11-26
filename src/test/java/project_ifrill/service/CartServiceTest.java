@@ -1,8 +1,6 @@
 package project_ifrill.service;
 
-import static org.junit.Assert.fail;
-
-import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
@@ -62,7 +60,7 @@ public class CartServiceTest {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");	//getStackTrace는 메소드 이름이 나온다
 		
 		
-		ArrayList<Cart> list = service.getCartByMember("one");
+		List<Cart> list = service.getCartByMember("one");
 		Assert.assertNotNull(list);
 		
 		list.forEach(cart -> log.debug(cart.toString()));

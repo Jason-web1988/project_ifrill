@@ -13,7 +13,24 @@
 <script type="text/javascript">
 $(function(){
 	var contextPath = "<%=request.getContextPath()%>";
-	$.get(contextPath+"/api/kindList", function(json){
+	
+/* 	$.get(contextPath +"/api/myPageList", function(json){
+		var dataLength = json.length;
+		if(dataLength >= 1){
+			var sCont += "<ul>";
+			for(i=0; i<dataLength; i++){
+				sCont += "<li><a href = myPageKind?kind=" + json[i].no + ">" + json[i].name + "</a></li>";
+			}
+			sCont += "</ul>";
+			 if ($("#top_menu").has("ul").length < 1){    
+	            $("#top_menu").append(sCont); 
+	        }
+		        if ($("#sub_menu").has("ul").length < 1){
+	            $("#sub_menu").append(sCont);
+	        } 
+		}
+	}); */
+	 $.get(contextPath+"/api/kindList", function(json){
 	    var dataLength = json.length;
 	    if ( dataLength >=1 ){
 	        var sCont = "<ul>";
@@ -29,8 +46,22 @@ $(function(){
 	        } 
 	    } 
 	}); 
+	
+	$('#confirm').on("click", function(){
+		if(document.getElementById("password").value == ""){
+			alert("비밀번호를 입력해주세요");
+			return false;
+		} 
+		
+		if(document.getElementById("password").value != 123){
+			alert("비밀번호가 일치하지 않습니다");
+			return false;
+		}
+		window.location.href = contextPath + "/checked";
+	});
 });
-  </script>
+
+</script>
 </head>
 
 <body>
@@ -67,7 +98,7 @@ $(function(){
          <a href="cartList.do">CART</a>
        </li><li>/</li>
        <li>
-         <a href="mypage.do">MY PAGE</a>
+         <a href="mypage">MY PAGE</a>
        </li><li>/</li>
        <li>
          <a href="qnaList.do">Q&amp;A(1:1)</a>

@@ -1,6 +1,5 @@
 package project_ifrill.controller;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -65,8 +64,5 @@ public class RestProductController {
 		  kindList.stream().forEach(System.out::println);
 		  return ResponseEntity.ok(kindList);
 	}
-	
-
-	
 	
 }

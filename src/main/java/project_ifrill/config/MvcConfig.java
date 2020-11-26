@@ -50,8 +50,13 @@ public class MvcConfig implements WebMvcConfigurer{
 		registry.addViewController("/main").setViewName("/main");
 		registry.addViewController("/productDetail").setViewName("/product/productDetail");
 		registry.addViewController("/productKind").setViewName("/product/productKind");
+<<<<<<< HEAD
 		registry.addViewController("/login").setViewName("/member/login");
 		registry.addViewController("/join").setViewName("/member/join");
+=======
+		registry.addViewController("/mypage").setViewName("/mypage/mypage");
+		registry.addViewController("/checked").setViewName("/mypage/confirmPass");
+>>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
 	}
 	
 	

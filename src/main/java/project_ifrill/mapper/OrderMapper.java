@@ -10,7 +10,7 @@ public interface OrderMapper {
 
     /*    
     OrderService로 이동
-    int insertOrder(Member member);//orders테이블과 detail테이블 추가 트랜잭션적용
+    int insertOrder(Member member);	//orders테이블과 detail테이블 추가 트랜잭션적용
     void insertOrderDetail(Cart cart, int ordersNo);
       */      
 	int selectMaxOrdersNo();

@@ -172,3 +172,6 @@ SELECT NO, NAME, KIND, PRICE, SALEPRICE, MARGIN, CONTENT, IMAGE, DEL_YN, BEST_YN
         FROM PRODUCT 
         WHERE kind= 5;		
        
+------------- 2020/11/26 윤한석 MemberList 출력 (MemberInfo 만들려고) -------------
+SELECT * FROM MEMBER;
+       

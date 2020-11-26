@@ -82,7 +82,7 @@ INSERT INTO QNA (SUBJECT, CONTENT, ID) VALUES(?, ?, ?);
 -- worker
 SELECT * FROM worker;
 
-SELECT 1 FROM worker WHERE id='admin' AND pwd='admin';
+SELECT 1 FROM worker WHERE id='ADMIN' AND pwd='ADMIN';
 SELECT 1 FROM worker WHERE id='admin' AND pwd='1111';
 SELECT 1 FROM worker WHERE id='aaaa' AND pwd='admin';
  

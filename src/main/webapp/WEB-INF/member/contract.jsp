@@ -3,6 +3,24 @@
 <%@ include file="../header.jsp" %>	 
 <%@ include file="sub_img.html"%> 
 <%@ include file="sub_menu.jsp" %>   
+
+<script>
+window.name ="Parent_window";
+
+$(function() {
+	$("#next").on("click",function() {
+		if(document.getElementById("checkboxA").checked==false) {
+			window.alert("이용약관에 동의를 하셔야 회원가입이 가능합니다.");
+			document.getElementById("checkboxA").focus();
+			return history.go(-1);
+		} 
+		
+		form_chk.submit();
+	});
+	
+});
+</script>
+
   <article>
     <h2>Join Us</h2>
         언제나 새로운 즐거움이 가득한 Nonage의 회원가입 페이지 입니다. <br>
@@ -185,11 +203,13 @@
 (3) 서비스 이용으로 발생한 분쟁에 대해 소송이 제기되는 경우 회사의 본사 소재지를 관할하는 법원을 관할 법원으로 합니다.
       </textarea>
       <br><br>
-      <div style="text-align: center;">
-      <input type="radio" id="okon1" name="okon1" > 동의함 &nbsp; &nbsp; &nbsp;
-      <input type="radio" name="okon1" checked> 동의안함
+       <form name="form_chk" action="join">
+      <div  style="text-align: center;">
+      <input type="checkbox" id="checkboxA" name="checkboxA" > 동의함 &nbsp; &nbsp; &nbsp;
+      <input type="checkbox" name="okon1" checked> 동의안함
       </div>
       <input type="button" id="next" value="next" class="submit" style="float: right;" 
       onclick="location='join'"> 
+      </form>
   </article>
 <%@ include file="../footer.jsp" %>  

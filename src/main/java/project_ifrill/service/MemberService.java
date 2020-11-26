@@ -13,8 +13,18 @@ public interface MemberService {
 	int joinMember(Member member);	//insert 구문A
 	
 	Member getMember(String id);
-	
-	
+	// 회원 수정
+		int updateMember(Member member);
+		
+		// 비밀번호 변경
+		int changePass1(Member member);
+		
+		// 회원 탈퇴
+		int leaveMember(Member member);
+		
+		// 관리자 회원 탈퇴
+		int deleteMember(Member member);
+		
 	//관리자모드
 	ArrayList<Member> getMemberList(String memberName);
 }

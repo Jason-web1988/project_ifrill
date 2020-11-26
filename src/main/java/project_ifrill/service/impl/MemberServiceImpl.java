@@ -55,4 +55,29 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.listMember(memberName);
 	}
 
+	@Override
+	public int updateMember(Member member) {
+		log.debug("service - updateMember() member >> " + member);
+		return mapper.updateMember(member);
+	}
+
+	@Override
+	public int changePass1(Member member) {
+		log.debug("service - changePass1() member >> " + member);
+		return mapper.changePass1(member);
+	}
+
+	@Override
+	public int leaveMember(Member member) {
+		log.debug("service - leaveMember() member >> " + member);
+		return mapper.leaveMember(member);
+	}
+
+	@Override
+	public int deleteMember(Member member) {
+		log.debug("service - deleteMember() member >> " + member);
+		return mapper.deleteMember(member);
+	}
+
+
 }

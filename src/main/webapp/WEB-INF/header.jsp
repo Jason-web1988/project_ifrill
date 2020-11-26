@@ -13,7 +13,24 @@
 <script type="text/javascript">
 $(function(){
 	var contextPath = "<%=request.getContextPath()%>";
-	$.get(contextPath+"/api/kindList", function(json){
+	
+/* 	$.get(contextPath +"/api/myPageList", function(json){
+		var dataLength = json.length;
+		if(dataLength >= 1){
+			var sCont += "<ul>";
+			for(i=0; i<dataLength; i++){
+				sCont += "<li><a href = myPageKind?kind=" + json[i].no + ">" + json[i].name + "</a></li>";
+			}
+			sCont += "</ul>";
+			 if ($("#top_menu").has("ul").length < 1){    
+	            $("#top_menu").append(sCont); 
+	        }
+		        if ($("#sub_menu").has("ul").length < 1){
+	            $("#sub_menu").append(sCont);
+	        } 
+		}
+	}); */
+	 $.get(contextPath+"/api/kindList", function(json){
 	    var dataLength = json.length;
 	    if ( dataLength >=1 ){
 	        var sCont = "<ul>";
@@ -43,7 +60,6 @@ $(function(){
 		window.location.href = contextPath + "/checked";
 	});
 });
-
 
 </script>
 </head>

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import project_ifrill.dto.Member;
 import project_ifrill.dto.Orders;
 
 public interface OrderService {

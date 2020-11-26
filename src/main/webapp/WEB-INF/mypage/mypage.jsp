@@ -5,7 +5,7 @@
 
 <%@ include file="../header.jsp"%>
 <%@ include file="sub_img.html"%>
-<%@ include file="../product/sub_menu.jsp"%>
+<%@ include file="sub_menu.jsp"%>
 	<article>
 		<h2>마이페이지(${title})</h2>
 		<form name="form" method="post">
@@ -37,7 +37,7 @@
 			<div class="clear"></div>
 			<div id="buttons" style="float: right">
 				<input type="button" value="쇼핑 계속하기" class="cancel"
-					onclick="location.href='index.do'">
+					onclick="location.href='/project_ifrill/main'">
 			</div>
 		</form>
 	</article>

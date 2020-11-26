@@ -65,7 +65,7 @@ $(function(){
        <c:when test="${empty sessionScope.loginUser}">
        <li>         
          <a href="loginform.do" style="width:110px;">LOGIN(CUSTOMER</a>   
-	     <a href="adminLoginForm.do" style="width:100px;">| ADMIN)</a>
+	     <a href="adminMain">|&nbsp;&nbsp;   ADMIN)</a>
 	   </li>		       
        <li>/</li>
        <li><a href="contract.do">JOIN</a></li>

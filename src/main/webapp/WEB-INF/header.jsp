@@ -80,11 +80,11 @@ $(function(){
        <c:choose>
        <c:when test="${empty sessionScope.loginUser}">
        <li>         
-         <a href="loginform.do" style="width:110px;">LOGIN(CUSTOMER</a>   
+         <a href="login" style="width:110px;">LOGIN(CUSTOMER</a>   
 	     <a href="adminMain">|&nbsp;&nbsp;   ADMIN)</a>
 	   </li>		       
        <li>/</li>
-       <li><a href="contract.do">JOIN</a></li>
+       <li><a href="contract">JOIN</a></li>
        </c:when>
        <c:otherwise>
        <li style="color:orange">

@@ -189,6 +189,7 @@
       <input type="radio" id="okon1" name="okon1" > 동의함 &nbsp; &nbsp; &nbsp;
       <input type="radio" name="okon1" checked> 동의안함
       </div>
-      <input type="button" id="next" value="Next" class="submit" style="float: right;"> 
+      <input type="button" id="next" value="next" class="submit" style="float: right;" 
+      onclick="location.href='login'"> 
   </article>
 <%@ include file="../footer.jsp" %>  

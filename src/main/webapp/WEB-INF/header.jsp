@@ -29,8 +29,23 @@ $(function(){
 	        } 
 	    } 
 	}); 
+	
+	$('#confirm').on("click", function(){
+		if(document.getElementById("password").value == ""){
+			alert("비밀번호를 입력해주세요");
+			return false;
+		} 
+		
+		if(document.getElementById("password").value != 123){
+			alert("비밀번호가 일치하지 않습니다");
+			return false;
+		}
+		window.location.href = contextPath + "/checked";
+	});
 });
-  </script>
+
+
+</script>
 </head>
 
 <body>

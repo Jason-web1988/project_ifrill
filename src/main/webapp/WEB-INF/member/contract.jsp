@@ -190,6 +190,6 @@
       <input type="radio" name="okon1" checked> 동의안함
       </div>
       <input type="button" id="next" value="next" class="submit" style="float: right;" 
-      onclick="location.href='login'"> 
+      onclick="location='join'"> 
   </article>
 <%@ include file="../footer.jsp" %>  

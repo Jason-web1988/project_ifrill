@@ -1,18 +1,10 @@
 {
 	"folders": {},
 	"connections": {
-<<<<<<< HEAD
-		"oracle_thin-175ff59cd60-768114b4e3738a0e": {
-=======
-		"oracle_thin-175fe1c8d16-55cb26571f1fc8cd": {
->>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
+		"oracle_thin-176049307ab-7f7d5f3a75829782": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-<<<<<<< HEAD
 			"name": "ORCL",
-=======
-			"name": "xe",
->>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
@@ -35,73 +27,6 @@
 					"@dbeaver-connection-type@": "BASIC",
 					"@dbeaver-sid-service@": "SERVICE"
 				},
-<<<<<<< HEAD
-<<<<<<< HEAD
-				"auth-model": "oracle_native",
-				"handlers": {}
-			}
-		},
-		"oracle_thin-175ff5aa25b-6e5475aa741d245f": {
-			"provider": "oracle",
-			"driver": "oracle_thin",
-			"name": "ORCL-IFRILL",
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"host": "localhost",
-				"port": "1521",
-				"database": "ORCL",
-				"url": "jdbc:oracle:thin:@//localhost:1521/ORCL",
-				"home": "C:\\app\\Administrator\\product\\11.2.0\\dbhome_1",
-				"type": "dev",
-				"provider-properties": {
-					"@dbeaver-check-schema-content@": "false",
-					"@dbeaver-always-show-dba@": "false",
-					"@dbeaver-always-use-dba-views@": "false",
-					"@dbeaver-meta-use-sys-schema@": "false",
-					"@dbeaver-meta-use-simple-constraints@": "false",
-					"@dbeaver-use-rule-hint@": "false",
-					"@dbeaver-use-meta-optimizer@": "false",
-					"@dbeaver-meta-use-alternative-table-query@": "false",
-					"@dbeaver-connection-type@": "BASIC",
-					"@dbeaver-sid-service@": "SERVICE"
-				},
-=======
->>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
-=======
-				"auth-model": "oracle_native"
-			}
-		},
-
-		"oracle_thin-17604141f58-4438e705684c176a": {
-			"provider": "oracle",
-			"driver": "oracle_thin",
-			"name": "xe 2",
-
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"host": "localhost",
-				"port": "1521",
-				"database": "xe",
-				"url": "jdbc:oracle:thin:@//localhost:1521/xe",
-				"home": "C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server",
-				"type": "dev",
-				"provider-properties": {
-					"@dbeaver-check-schema-content@": "false",
-					"@dbeaver-always-show-dba@": "false",
-					"@dbeaver-always-use-dba-views@": "false",
-					"@dbeaver-meta-use-sys-schema@": "false",
-					"@dbeaver-meta-use-simple-constraints@": "false",
-					"@dbeaver-use-rule-hint@": "false",
-					"@dbeaver-use-meta-optimizer@": "false",
-					"@dbeaver-meta-use-alternative-table-query@": "false",
-					"@dbeaver-connection-type@": "BASIC",
-					"@dbeaver-sid-service@": "SERVICE"
-				},
->>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
 				"auth-model": "oracle_native",
 				"handlers": {}
 			}

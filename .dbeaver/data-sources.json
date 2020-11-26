@@ -30,7 +30,7 @@
 				"auth-model": "oracle_native"
 			}
 		},
-<<<<<<< HEAD
+
 		"oracle_thin-17604141f58-4438e705684c176a": {
 			"provider": "oracle",
 			"driver": "oracle_thin",

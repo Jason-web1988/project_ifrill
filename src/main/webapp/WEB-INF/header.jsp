@@ -11,7 +11,11 @@
 <script type="text/javascript"
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-  $(function(){
+   $(function(){
+	  $('#qna').('onclick',function(){
+		  window.location.href="/qna/qnaList.jsp";
+	  }) 
+	  
 		var contextPath = "<%=request.getContextPath()%>";
 		$.post(contextPath+ "/order/kindList", function(json){
 			alert(json);
@@ -72,8 +76,8 @@
        <li>
          <a href="mypage.do">MY PAGE</a>
        </li><li>/</li>
-       <li>
-         <a href="qnaBoard">Q&amp;A(1:1)</a>
+       <li id="qna">
+         <a href="qnaList">Q&amp;A(1:1)</a>
        </li>
      </ul>
     </nav>

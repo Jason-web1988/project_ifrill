@@ -34,10 +34,38 @@
 					$("#sub_menu").append(sCont);
 				} 
 				
-			}
-		});
+	 $.get(contextPath+"/api/kindList", function(json){
+	    var dataLength = json.length;
+	    if ( dataLength >=1 ){
+	        var sCont = "<ul>";
+	        for ( i=0 ; i < dataLength ; i++){
+	            sCont += "<li><a href=productKind?kind=" + json[i].no + ">" + json[i].name + "</a></li>";
+	        }
+	        sCont += "</ul>";
+	         if ($("#top_menu").has("ul").length < 1){    
+	            $("#top_menu").append(sCont); 
+	        }
+	        if ($("#sub_menu").has("ul").length < 1){
+	            $("#sub_menu").append(sCont);
+	        } 
+	    } 
+	}); 
+	
+	$('#confirm').on("click", function(){
+		if(document.getElementById("password").value == ""){
+			alert("비밀번호를 입력해주세요");
+			return false;
+		} 
+		
+		if(document.getElementById("password").value != 123){
+			alert("비밀번호가 일치하지 않습니다");
+			return false;
+		}
+		window.location.href = contextPath + "/checked";
 	});
-  </script>
+});
+
+</script>
 </head>
 
 <body>
@@ -56,11 +84,11 @@
        <c:choose>
        <c:when test="${empty sessionScope.loginUser}">
        <li>         
-         <a href="loginform.do" style="width:110px;">LOGIN(CUSTOMER</a>   
-	     <a href="adminLoginForm.do" style="width:100px;">| ADMIN)</a>
+         <a href="login" style="width:110px;">LOGIN(CUSTOMER</a>   
+	     <a href="adminMain">|&nbsp;&nbsp;   ADMIN)</a>
 	   </li>		       
        <li>/</li>
-       <li><a href="contract.do">JOIN</a></li>
+       <li><a href="contract">JOIN</a></li>
        </c:when>
        <c:otherwise>
        <li style="color:orange">
@@ -74,7 +102,7 @@
          <a href="cartList.do">CART</a>
        </li><li>/</li>
        <li>
-         <a href="mypage.do">MY PAGE</a>
+         <a href="mypage">MY PAGE</a>
        </li><li>/</li>
        <li id="qna">
          <a href="qnaList">Q&amp;A(1:1)</a>

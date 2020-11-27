@@ -23,7 +23,7 @@ CREATE TABLE product (
 	best_yn CHAR(1) DEFAULT 'n', /* 베스트상품여부 */
 	reg_date DATE DEFAULT sysdate /* 등록일 */
 );
-
+select * from PRODUCT;
 /* 회원 */
 CREATE TABLE member (
 	id VARCHAR2(20) NOT NULL PRIMARY KEY, /* 회원아이디 */

@@ -11,9 +11,7 @@ public class QnA {
     private String repYN; // 답변여부 1:답변무, 2:답변유
     private Date writeDate; // 작성일
 
-    public QnA() {
-        // TODO Auto-generated constructor stub
-    }
+    public QnA() {}
 
     public QnA(String subject, String content, String id) {
         this.subject = subject;

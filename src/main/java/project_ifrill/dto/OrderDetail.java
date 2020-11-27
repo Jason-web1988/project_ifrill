@@ -9,7 +9,6 @@ public class OrderDetail {
     private Date orderDate;
     
     public OrderDetail() {
-        // TODO Auto-generated constructor stub
     }
 
     public OrderDetail(Cart cart) {

@@ -25,6 +25,26 @@
 		</where>
 	</sql>
 	
+	<sql id="whereSQL2">
+		<where>
+			<if test="id !=null">
+				ID=#{id}
+			</if>
+		</where>
+	</sql>
+	
+
+	
+
+	
+	<select id="updateMember" resultType="Member">
+			update set member id=#{id}, pwd=#{pwd}, name=#{name}, zip_num= #{zipNum}, address= #{address}, phone= #{phone}, email= #{email}
+		<include refid="whereSQL2"/>
+		
+	</select>
+	
+	
+	
 	<select id="getMember" resultType="Member">
 		<include refid="selectSQL"/>
 		WHERE id=#{id}

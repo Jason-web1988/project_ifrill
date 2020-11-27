@@ -1,18 +1,26 @@
 {
 	"folders": {},
 	"connections": {
-		"oracle_thin-175df61f9ab-58ac3291bb8c0aa9": {
+<<<<<<< HEAD
+		"oracle_thin-175fa720705-6a5f8f93731828b2": {
+=======
+		"oracle_thin-175fe1c8d16-55cb26571f1fc8cd": {
+>>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "xe-i_frill",
+<<<<<<< HEAD
+			"name": "ORCL",
+=======
+			"name": "xe",
+>>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
 				"host": "localhost",
 				"port": "1521",
-				"database": "xe",
-				"url": "jdbc:oracle:thin:@//localhost:1521/xe",
+				"database": "ORCL",
+				"url": "jdbc:oracle:thin:@//localhost:1521/ORCL",
 				"home": "C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server",
 				"type": "dev",
 				"provider-properties": {

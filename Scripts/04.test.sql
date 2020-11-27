@@ -2,10 +2,13 @@ select 1 from member where id='ONE';
 select ID, PWD, NAME, EMAIL, ZIP_NUM, ADDRESS, PHONE, LEAVE_YN, JOIN_DATE 
   from member where id='one';
  
+ SELECT * FROM PRODUCT ;
+ 
 SELECT * FROM MEMBER;
 SELECT count(*) FROM address;
 
 select ZIP_NUM, SIDO, GUGUN, DONG, ZIP_CODE, BUNJI from address where dong like '%구암동%';
+select ZIP_NUM, SIDO, GUGUN, DONG, ZIP_CODE, BUNJI from address where SIDO like '%대구%';
 
 -- cart
 insert into cart(memberid, pno, quantity) values('one', 1, 1);
@@ -82,7 +85,7 @@ INSERT INTO QNA (SUBJECT, CONTENT, ID) VALUES('subject', 'content', 'id');
 -- worker
 SELECT * FROM worker;
 
-SELECT 1 FROM worker WHERE id='admin' AND pwd='admin';
+SELECT 1 FROM worker WHERE id='ADMIN' AND pwd='ADMIN';
 SELECT 1 FROM worker WHERE id='admin' AND pwd='1111';
 SELECT 1 FROM worker WHERE id='aaaa' AND pwd='admin';
  
@@ -167,4 +170,11 @@ SELECT NO, MEMBERID, PNO, MNAME, PNAME, QUANTITY, REG_DATE, SALEPRICE, RESULT
 		  FROM CART_VIEW
 		 WHERE MEMBERID = 'two'
 		 ORDER BY NO DESC;
+		
+SELECT NO, NAME, KIND, PRICE, SALEPRICE, MARGIN, CONTENT, IMAGE, DEL_YN, BEST_YN, REG_DATE
+        FROM PRODUCT 
+        WHERE kind= 5;		
+       
+------------- 2020/11/26 윤한석 MemberList 출력 (MemberInfo 만들려고) -------------
+SELECT * FROM MEMBER;
        

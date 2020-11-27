@@ -1,17 +1,23 @@
 package project_ifrill.controller;
 
+<<<<<<< HEAD
 import java.util.Arrays;
 import java.util.List;
 
+=======
+>>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+<<<<<<< HEAD
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import project_ifrill.dto.Kind;
+=======
+>>>>>>> branch 'master' of https://github.com/Jason-web1988/project_ifrill.git
 import project_ifrill.service.ProductService;
 
 @Controller
@@ -47,6 +53,8 @@ public class ProductController {
 	       	        
 	        return result;
 	}
+	
+	
 	
 	//페이징기법 해야함
 //    public String pageNumber(int tpage, String name);

@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>메인 화면</title>
-<script type="text/javascript" 
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
 		var contextPath = "<%=request.getContextPath()%>";
@@ -77,7 +76,7 @@ $(function() {
 				<table>
 					<thead>					
 					</thead>
-					<tbody id=newLoad></tbody>
+					<tbody id="newLoad"></tbody>
 				</table>
 		</div>
     </div>  
@@ -100,7 +99,7 @@ $(function() {
 				<table>
 					<thead>					
 					</thead>
-					<tbody id=bestLoad></tbody>
+					<tbody id="bestLoad"></tbody>
 				</table>
 		</div>
     </div>  

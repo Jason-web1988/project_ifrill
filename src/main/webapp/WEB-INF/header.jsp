@@ -11,25 +11,29 @@
 <script type="text/javascript"
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-$(function(){
-	var contextPath = "<%=request.getContextPath()%>";
-	
-/* 	$.get(contextPath +"/api/myPageList", function(json){
-		var dataLength = json.length;
-		if(dataLength >= 1){
-			var sCont += "<ul>";
-			for(i=0; i<dataLength; i++){
-				sCont += "<li><a href = myPageKind?kind=" + json[i].no + ">" + json[i].name + "</a></li>";
-			}
-			sCont += "</ul>";
-			 if ($("#top_menu").has("ul").length < 1){    
-	            $("#top_menu").append(sCont); 
-	        }
-		        if ($("#sub_menu").has("ul").length < 1){
-	            $("#sub_menu").append(sCont);
-	        } 
-		}
-	}); */
+   $(function(){
+	  $('#qna').('onclick',function(){
+		  window.location.href="/qnaList.jsp";
+	  }); 
+	  
+		var contextPath = "<%=request.getContextPath()%>";
+		$.post(contextPath+ "/order/kindList", function(json){
+			alert(json);
+			var dataLength = json.length;
+			if(dataLength >=1 ){
+				var sCont = "<ul>";
+				for(i=0, i<dataLength; i++){
+					sCont +="<li><a href=productKind?no=" + json[i].no + ">" + json[i].name + "</a></li>";
+				}
+				sCont +="</ul>";
+				if($("#top_menu").has("ul").length < 1){
+					$("#top_menu").append(sCont);
+				}
+				
+		 		if($("#sub_menu").has("ul").length < 1){
+					$("#sub_menu").append(sCont);
+				} 
+				
 	 $.get(contextPath+"/api/kindList", function(json){
 	    var dataLength = json.length;
 	    if ( dataLength >=1 ){
@@ -100,8 +104,8 @@ $(function(){
        <li>
          <a href="mypage">MY PAGE</a>
        </li><li>/</li>
-       <li>
-         <a href="qnaList.do">Q&amp;A(1:1)</a>
+       <li id="qna">
+         <a href="qnaList">Q&amp;A(1:1)</a>
        </li>
      </ul>
     </nav>

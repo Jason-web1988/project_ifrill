@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Nonage Admin</title>
-<link rel="stylesheet" href="/admin/css/admin.css">
+<link rel="stylesheet" href="resources/css/admin.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
 <%--<script type="text/javascript" src="admin/product/product.js"></script>
@@ -29,6 +29,6 @@
 					<img src="admin/images/text.gif">
 				</a>
 			</div>	
-			<input class="btn" type="button"  value="logout"  style="float: right;"  onClick="location.href='adminLogout.do'">			
+			<input class="btn" type="button"  value="logout"  style="float: right;"  onClick="location.href='adminMain'">			
 		</header>
 		<div class="clear"></div>

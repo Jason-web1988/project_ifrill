@@ -6,7 +6,7 @@
   <article>
     <h2>Join Us</h2>
     <form id="join" action="/member/join" method="post">
-      <fieldset>
+      <fieldset> 
         <legend>Basic Info</legend>
         <label>User ID</label>
 	        <input type="text"      id="id" name="id"        size="12"  >

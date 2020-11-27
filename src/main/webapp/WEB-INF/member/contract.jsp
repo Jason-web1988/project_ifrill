@@ -205,11 +205,13 @@ $(function() {
       <br><br>
        <form name="form_chk" action="join">
       <div  style="text-align: center;">
-      <input type="checkbox" id="checkboxA" name="checkboxA" > 동의함 &nbsp; &nbsp; &nbsp;
-      <input type="checkbox" name="okon1" checked> 동의안함
+      <input type="radio" id="checkboxA" name="checkboxA" > 동의함 &nbsp; &nbsp; &nbsp;
+      <input type="radio" name="checkboxB" checked> 동의안함
       </div>
       <input type="button" id="next" value="next" class="submit" style="float: right;" 
       onclick="location='join'"> 
+      
+      
       </form>
   </article>
 <%@ include file="../footer.jsp" %>  

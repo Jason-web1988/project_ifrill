@@ -1,9 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품 상세</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+</script>
+</head>
+<body>
 <%@ include file="../header.jsp" %>   
 <%@ include file="../product/sub_img.html"%> 
-<%@ include file="../product/sub_menu.jsp" %>   
+<%@ include file="../product/sub_menu.jsp" %>
+
+${qnaList}
   <article>
     <h2> 1:1 고객 게시판 </h2>
     <h3> 고객님의 질문에 대해서 운영자가 1:1 답변을 드립니다.</h3>
@@ -33,4 +46,7 @@
       </div>
     </form>
   </article>
+  
 <%@ include file="../footer.jsp" %>
+</body>
+</html>

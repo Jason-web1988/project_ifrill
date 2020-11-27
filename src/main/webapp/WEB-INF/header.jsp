@@ -13,8 +13,8 @@
 <script type="text/javascript">
    $(function(){
 	  $('#qna').('onclick',function(){
-		  window.location.href="/qna/qnaList.jsp";
-	  }) 
+		  window.location.href="/qnaList.jsp";
+	  }); 
 	  
 		var contextPath = "<%=request.getContextPath()%>";
 		$.post(contextPath+ "/order/kindList", function(json){

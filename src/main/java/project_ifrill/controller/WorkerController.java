@@ -23,6 +23,5 @@ public class WorkerController {
 		int getWorker = service.workerCheck(worker);
 		return getWorker;
 		
-		일부러 에러~~~ 여기부터시작입니다.
 	}
 }

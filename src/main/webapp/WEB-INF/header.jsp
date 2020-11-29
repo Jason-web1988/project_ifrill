@@ -12,7 +12,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
    $(function(){
-	  $('#qna').('onclick',function(){
+	  $('#qnaList').on('click',function(){
 		  window.location.href="/qnaList.jsp";
 	  }); 
 	  
@@ -94,17 +94,17 @@
        <li style="color:orange">
          ${sessionScope.loginUser.name}(${sessionScope.loginUser.id})
        </li>
-       <li><a href="logout.do">LOGOUT</a></li>
+       <li><a href="logout">LOGOUT</a></li>
        </c:otherwise>       
        </c:choose>
        <li>/</li>
        <li>
-         <a href="cartList.do">CART</a>
+         <a href="cartList">CART</a>
        </li><li>/</li>
        <li>
          <a href="mypage">MY PAGE</a>
        </li><li>/</li>
-       <li id="qna">
+       <li id="qnaList">
          <a href="qnaList">Q&amp;A(1:1)</a>
        </li>
      </ul>

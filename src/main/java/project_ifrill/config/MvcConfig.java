@@ -49,7 +49,6 @@ public class MvcConfig implements WebMvcConfigurer{
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/main").setViewName("/main");
 		registry.addViewController("/productDetail").setViewName("/product/productDetail");
-		registry.addViewController("/qnaList").setViewName("/qna/qnaList");
 		registry.addViewController("/productKind").setViewName("/product/productKind");
 
 		registry.addViewController("/login").setViewName("/member/login");
@@ -58,6 +57,10 @@ public class MvcConfig implements WebMvcConfigurer{
 
 		registry.addViewController("/mypage").setViewName("/mypage/confirmPass");
 		registry.addViewController("/checked").setViewName("/mypage/mypage");
+		
+		registry.addViewController("/qnaList").setViewName("/qna/qnaList");
+		registry.addViewController("/qnaWrite").setViewName("/qna/qnaWrite");
+		registry.addViewController("/continue").setViewName("/main");
 
 		registry.addViewController("/adminMain").setViewName("/admin/main");
 		registry.addViewController("/adminProductDetail").setViewName("/admin/product/productDetail");

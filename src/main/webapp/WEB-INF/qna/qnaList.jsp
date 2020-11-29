@@ -6,9 +6,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>상품 상세</title>
+<title>1:1 고객 게시판</title>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
+	$(function(){
+		var contextPath = "<%=request.getContextPath()%>";
+		
+		$('#qnaWrite').on('click',function(){
+			window.location.href="qnaWrite";
+		});
+		
+		$('#continue').on('click',function(){
+			window.location.href = contextPath + "/main";
+		});
+		
+		var contextPath = "<%=request.getContextPath()%>";
+		
+	})
 </script>
 </head>
 <body>
@@ -41,8 +55,8 @@ ${qnaList}
       </table>
       <div class="clear"></div>
       <div id="buttons" style="float:right">
-      <input type="button" value="1:1 질문하기"  class="submit" onclick="location.href='qnaWriteForm.do'"> 
-      <input type="button" value="쇼핑 계속하기"  class="cancel" onclick="location.href='index.do'">  
+      <input id="qnaWrite" type="button" value="1:1 질문하기"  class="submit"> 
+      <input id="continue" type="button" value="쇼핑 계속하기"  class="cancel">  
       </div>
     </form>
   </article>
